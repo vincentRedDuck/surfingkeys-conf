@@ -50,7 +50,7 @@ const maps = {}
 
 maps.global = [
   {
-    alias: "F",
+    alias: "<Ctrl-f>",
     map: "gf",
     category: categories.mouseClick,
     description: "Open a link in non-active new tab",
@@ -272,12 +272,6 @@ maps.global = [
       Front.showBanner(`Open ${url}`)
       actions.openLink(url, { newTab: true })
     },
-  },
-  {
-    alias: "F",
-    map: "gf",
-    category: categories.mouseClick,
-    description: "Open a link in non-active new tab",
   },
   {
     alias: "oh",
