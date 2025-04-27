@@ -50,6 +50,22 @@ const maps = {}
 
 maps.global = [
   {
+    alias: "<Alt-f>",
+    category: categories.mouseClick,
+    description: "Shift+click on links (simulates Zen's Glance)",
+    callback: () => {
+      api.Hints.create("*[href]", (element) => {
+          const event = new MouseEvent("click", {
+              shiftKey: true,
+              bubbles: true,
+              cancelable: true,
+              view: window,   
+          });
+          element.dispatchEvent(event);
+      });
+    },
+  },
+  {
     alias: "<Ctrl-f>",
     map: "gf",
     category: categories.mouseClick,

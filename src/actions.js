@@ -180,6 +180,18 @@ actions.togglePdfViewer = () =>
     }
   })
 
+actions.zenGlance = () => {
+  api.Hints.create("*[href]", (element) => {
+      const event = new MouseEvent("click", {
+          shiftKey: true,
+          bubbles: true,
+          cancelable: true,
+          view: window,
+      });
+      element.dispatchEvent(event);
+  });
+};
+
 actions.previewLink = () =>
   util.createHints("a[href]", (a) =>
     Front.showEditor(a.href, (url) => actions.openLink(url), "url")
