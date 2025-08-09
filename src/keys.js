@@ -66,7 +66,7 @@ maps.global = [
     },
   },
   {
-    alias: "<Ctrl-f>",
+    alias: "<Ctrl-Alt-f>",
     map: "gf",
     category: categories.mouseClick,
     description: "Open a link in non-active new tab",
